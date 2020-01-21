@@ -232,25 +232,44 @@ youRock('Mohammad') // 'You rock Mohammad!'
 youRock('Hisham') //'You rock Hisham!'
 youRock('Sager') //'You rock Sager!'
 ```
+const youRock = function(firstName, midName, lastName){ console.log (firstName +" " + midName +" " + lastName); }; 
+youRock ('Mohammad', 'Hisham', 'Sager');
+
+output:
+ Mohammad Hisham Sager
 
 2.  Define a `square` function that accepts a number argument and returns that number multiplied by itself.
 ```js
 square(2) // 4
 square(3) // 9
 ```
-
+const square  = function(num){ return num * num ; }; 
+output:
+square(3);
 3.  Define a `cube` function that accepts a number argument and returns that number raised to the third power.
 ```js
 cube(2) // 8
 cube(3) // 27
 ```
+const cube  = function(num){ return num * (num*num) ; }; 
 
+output:
+cube(3);
+27
+cube(2);
+8
 4.  Define a `toTheFourth` function that accepts a number argument and returns that number raised to the fourth power.
 ```js
 toTheFourth(2) // 16
 toTheFourth(3) // 81
 ```
+const toTheFourth  = function(num){ return num * (num*num*num) ; }; 
 
+output:
+toTheFourth(2);
+16
+toTheFourth(3);
+81
 #### Extra Practice
 
 If you finish the Lab, try this challenge.
@@ -264,7 +283,14 @@ calculator(1, 2, "multiply") // should return 2
 calculator(1, 2, "something else") // should return "calculator can only add, subtract, divide, or multiply
 calculator("cat", 2, "add") // should return "calculator only accepts numbers"
 ```
-
+const calculator  = function(num1, num2, option){   
+       if (option == "add" && num1 === "cat"){console.log("calculator only accepts numbers");}
+ else if(num1, num2, option == "add") {return (num1 + num2);}
+    else if(num1, num2, option == "subtract") {return (num1 - num2);}  
+  else if(num1, num2, option == "divide") {return (num1 / num2) ; }
+  else if(num1, num2, option == "multiply") {return( num1 * num2) ; }
+  else if(num1, num2, option == "something else") {console.log( "calculator can only add, subtract, divide, or multiply") ;}
+};
 ### Lab: FizzBuzz Function
 
 Write a function that accepts an argument of a number
@@ -282,8 +308,23 @@ fizzBuzz(3) // Fizz
 fizzBuzz(15) // FizzBuzz
 fizzBuzz(7) // 7
 ```
-
-### Lab: RainDrop Function
+const FizzBuzz  = function( a ){   
+  if(a % 3 == 0 && a % 5 == 0){
+    console.log("FizzBuzz")
+  }
+  else if (a % 3 == 0){ 
+    console.log("Fizz")
+  }
+  else if (a % 5 == 0 ){ 
+    console.log("Buzz" )
+  }        
+  else {
+    console.log( a )
+  }
+  
+};
+### Lab: const calculator  = function(num1, num2, option){   
+ Function
 
 Write a function that accepts an argument of a number
 
@@ -300,7 +341,22 @@ rainDrop(28) // Plong
 rainDrop(1755) // PlingPlang
 rainDrop(34) // 34
 ```
+const calculator  = function( a ){   
+  
+   if (a % 7 == 0){ 
+    console.log('Plong')
+  }
+  else if (a % 5 == 0 ){ 
+    console.log('Plang' )
+  }        
+  else if (a % 3 == 0 ) {
+    console.log( 'Pling' )
+  }
+ else{
+    console.log(a)
+  }
 
+};
 ## Additional Resources
 
 - [Functions Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
